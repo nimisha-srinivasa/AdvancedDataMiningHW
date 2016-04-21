@@ -306,8 +306,7 @@ def compute_softmax(arg):
 def normalize(X):
   mean_image = np.mean(X, axis=0)
   X -= mean_image 
-  X = np.divide(X, 5000,dtype=float)
-  #X /= np.std(X, axis = 0)
+  X = np.divide(X, 1000, dtype=float)
   return X
 
 def safe_log(array):
